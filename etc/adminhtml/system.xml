@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Enzo Silva <enzovaughan@gmail.com>
+ * @link   https://github.com/enzosilva
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="atwix" sortOrder="100" translate="label">
+            <label>Atwix</label>
+        </tab>
+        <section id="atwix" translate="label" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Customer</label>
+            <tab>atwix</tab>
+            <resource>Atwix_Customer::atwix_config</resource>
+            <group id="customer" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Customer Custom Funcionalities Configuration</label>
+                <field id="is_active_firstname_trim" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enable Firstname Trim</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <comment>Enable/Disable customer registration firstname trim.</comment>
+                </field>
+                <field id="is_active_log_data" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enable Log Data</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <comment>Enable/Disable customer registration log data.</comment>
+                </field>
+                <field id="is_active_email_sending" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enable Email Sending</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <comment>Enable/Disable customer registration email sending.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

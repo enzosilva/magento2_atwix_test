@@ -1,0 +1,21 @@
+<!--@subject {{trans "Customer Registration Information"}} @-->
+{{template config_path="design/email/header_template"}}
+<table>
+    <thead>
+        <td>
+            <div>
+                <b>Customer Information</b>
+            </div>
+        </td>
+    </thead>
+    <tbody>
+        <td>
+            <div>
+                <p>Firstname: {{var customerFirstname}}</p>
+                <p>Lastname: {{var customerLastname}}</p>
+                <p>Email: {{var customerEmail}}</p>
+            </div>
+        </td>
+    </tbody>
+</table>
+{{template config_path="design/email/footer_template"}}

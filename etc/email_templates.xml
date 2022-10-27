@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Enzo Silva <enzovaughan@gmail.com>
+ * @link   https://github.com/enzosilva
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+	<template id="atwix_customer_registration"
+		label="Atwix Customer Registration Info"
+		file="atwix_customer_registration.html"
+		type="html"
+		module="Atwix_Customer"
+		area="frontend"
+	/>
+</config>
