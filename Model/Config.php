@@ -41,8 +41,8 @@ class Config
      * @return bool
      */
     public function isActiveCustomerFirstnameTrim(
-    	string $scopeType = ScopeInterface::SCOPE_STORE,
-    	?string $storeId = null
+        string $scopeType = ScopeInterface::SCOPE_STORE,
+        ?string $storeId = null
     ): bool {
         return $this->getScopeConfigFlag(self::PATH_ATWIX_CUSTOMER_FIRSTNAME_TRIM_IS_ACTIVE);
     }
@@ -56,8 +56,8 @@ class Config
      * @return bool
      */
     public function isActiveCustomerLogData(
-    	string $scopeType = ScopeInterface::SCOPE_STORE,
-    	?string $storeId = null
+        string $scopeType = ScopeInterface::SCOPE_STORE,
+        ?string $storeId = null
     ): bool {
         return $this->getScopeConfigFlag(self::PATH_ATWIX_CUSTOMER_LOG_DATA_IS_ACTIVE);
     }
@@ -71,8 +71,8 @@ class Config
      * @return bool
      */
     public function isActiveCustomerEmailSending(
-    	string $scopeType = ScopeInterface::SCOPE_STORE,
-    	?string $storeId = null
+        string $scopeType = ScopeInterface::SCOPE_STORE,
+        ?string $storeId = null
     ): bool {
         return $this->getScopeConfigFlag(self::PATH_ATWIX_CUSTOMER_EMAIL_SENDING_IS_ACTIVE);
     }
@@ -87,11 +87,11 @@ class Config
      * @return bool
      */
     private function getScopeConfigFlag(
-    	string $path,
-    	string $scopeType = ScopeInterface::SCOPE_STORE,
-    	?string $storeId = null
+        string $path,
+        string $scopeType = ScopeInterface::SCOPE_STORE,
+        ?string $storeId = null
     ): bool {
-    	return $this->scopeConfig->isSetFlag(
+        return $this->scopeConfig->isSetFlag(
             $path,
             $scopeType,
             $storeId

@@ -13,7 +13,7 @@ use Atwix\Customer\Model\Config;
 
 class CustomerInterface
 {
-	/**
+    /**
      * @var Config
      */
     private Config $atwixCustomerConfig;
@@ -38,8 +38,8 @@ class CustomerInterface
         Subject $subject,
         string $firstname
     ): array {
-    	if ($this->atwixCustomerConfig->isActiveCustomerFirstnameTrim()) {
-        	return [trim($firstname)];
+        if ($this->atwixCustomerConfig->isActiveCustomerFirstnameTrim()) {
+            return [trim($firstname)];
         }
 
         return [$firstname];

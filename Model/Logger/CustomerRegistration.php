@@ -16,14 +16,14 @@ use Magento\Customer\Api\Data\CustomerInterface;
  */
 class CustomerRegistration
 {
-	/**
-	 * @var CustomerRegistrationLogger
-	 */
-	private CustomerRegistrationLogger $customerRegistrationLogger;
+    /**
+     * @var CustomerRegistrationLogger
+     */
+    private CustomerRegistrationLogger $customerRegistrationLogger;
 
-	/**
-	 * @param CustomerRegistrationLogger $customerRegistrationLogger
-	 */
+    /**
+     * @param CustomerRegistrationLogger $customerRegistrationLogger
+     */
     public function __construct(CustomerRegistrationLogger $customerRegistrationLogger)
     {
         $this->customerRegistrationLogger = $customerRegistrationLogger;
@@ -36,7 +36,7 @@ class CustomerRegistration
      */
     public function log(CustomerInterface $customer): void
     {
-    	$this->customerRegistrationLogger->info(
+        $this->customerRegistrationLogger->info(
             sprintf(
                 "\n*** Customer Information ***\nFirstname: %s\nLastname: %s\nEmail: %s",
                 $customer->getFirstname(),
@@ -53,6 +53,6 @@ class CustomerRegistration
      */
     public function logError(string $message): void
     {
-    	$this->customerRegistrationLogger->error($message);
+        $this->customerRegistrationLogger->error($message);
     }
 }

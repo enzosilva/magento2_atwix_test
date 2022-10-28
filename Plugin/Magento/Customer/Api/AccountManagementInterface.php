@@ -16,7 +16,7 @@ use Atwix\Customer\Helper\Email as EmailHelper;
 
 class AccountManagementInterface
 {
-	/**
+    /**
      * @var Config
      */
     private Config $atwixCustomerConfig;
@@ -37,9 +37,9 @@ class AccountManagementInterface
      * @param EmailHelper $emailHelper
      */
     public function __construct(
-    	Config $atwixCustomerConfig,
-    	CustomerRegistration $customerRegistrationLogger,
-    	EmailHelper $emailHelper
+        Config $atwixCustomerConfig,
+        CustomerRegistration $customerRegistrationLogger,
+        EmailHelper $emailHelper
     ) {
         $this->atwixCustomerConfig = $atwixCustomerConfig;
         $this->customerRegistrationLogger = $customerRegistrationLogger;
@@ -58,12 +58,12 @@ class AccountManagementInterface
         Subject $subject,
         CustomerInterface $result
     ): CustomerInterface {
-    	if ($this->atwixCustomerConfig->isActiveCustomerLogData()) {
-        	$this->customerRegistrationLogger->log($result);
+        if ($this->atwixCustomerConfig->isActiveCustomerLogData()) {
+            $this->customerRegistrationLogger->log($result);
         }
 
         if ($this->atwixCustomerConfig->isActiveCustomerEmailSending()) {
-        	$this->emailHelper->send($result);
+            $this->emailHelper->send($result);
         }
 
         return $result;
