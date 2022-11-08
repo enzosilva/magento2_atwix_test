@@ -77,7 +77,7 @@ class Email extends AbstractHelper
                 'trans_email/ident_support/name',
                 ScopeInterface::SCOPE_STORE
             );
-            $senderEmail = $scopeConfig->getValue(
+            $senderEmail = $this->scopeConfig->getValue(
                 'trans_email/ident_support/email',
                 ScopeInterface::SCOPE_STORE
             );
